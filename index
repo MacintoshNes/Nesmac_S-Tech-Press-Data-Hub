@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Nesmac_S Tech Press Consult & Stationaries Ltd. — Data Bundle Hub. Fast, secure and affordable data delivery.">
+<title>Nesmac_S Tech Press — Data Bundle Hub</title>
+<style>
+:root{
+  --navy:#071b49; --navy2:#0d2b67; --gold:#ffc400; --yellow:#ffe600;
+  --red:#e71922; --blue:#0b4fa8; --ink:#101828; --muted:#667085;
+  --bg:#f5f8fc; --white:#fff; --shadow:0 16px 45px rgba(7,27,73,.12);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink)}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,92%);margin:auto}
+.topbar{background:var(--navy);color:#fff;text-align:center;padding:9px 16px;font-size:.9rem}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid #e6ebf2}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:900;color:var(--navy)}
+.logo{width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;display:grid;place-items:center;font-weight:900}
+.brand small{display:block;color:var(--muted);font-size:.72rem;margin-top:2px}
+nav{display:flex;gap:24px;align-items:center;font-weight:700;font-size:.94rem}
+nav a:hover{color:var(--blue)}
+.cta{background:var(--gold);padding:12px 18px;border-radius:999px;color:#111;font-weight:900}
+.hero{padding:76px 0 60px;background:
+ radial-gradient(circle at 10% 15%,rgba(255,196,0,.24),transparent 28%),
+ radial-gradient(circle at 90% 10%,rgba(11,79,168,.16),transparent 28%),
+ linear-gradient(180deg,#fff 0%,#f4f8ff 100%)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:45px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;background:#fff4bf;border:1px solid #ffe27a;padding:8px 13px;border-radius:999px;font-weight:800;font-size:.85rem}
+h1{font-size:clamp(2.5rem,6vw,5.3rem);line-height:.95;margin:18px 0;color:var(--navy);letter-spacing:-.055em}
+h1 span{color:#e2a900}
+.hero p{font-size:1.12rem;line-height:1.75;color:#475467;max-width:680px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.btn{padding:14px 20px;border-radius:12px;font-weight:900;border:1px solid #d7deea}
+.btn-primary{background:var(--navy);color:#fff;border-color:var(--navy)}
+.btn-gold{background:var(--gold);border-color:var(--gold)}
+.hero-card{background:var(--navy);border-radius:28px;padding:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero-card:before{content:"";position:absolute;width:240px;height:240px;border-radius:50%;background:rgba(255,196,0,.16);right:-80px;top:-80px}
+.hero-card h3{font-size:1.55rem;margin:0 0 18px;position:relative}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;position:relative}
+.stat{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.12);padding:18px;border-radius:18px}
+.stat strong{font-size:1.45rem;display:block;color:var(--gold)}
+.stat span{font-size:.82rem;color:#d9e3f4}
+section{padding:76px 0}
+.section-head{text-align:center;max-width:720px;margin:0 auto 35px}
+.section-head h2{font-size:clamp(2rem,4vw,3rem);margin:0 0 10px;color:var(--navy)}
+.section-head p{color:var(--muted);line-height:1.7}
+.network-tabs{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:28px}
+.tab{border:0;background:#e9eef7;color:var(--navy);padding:11px 17px;border-radius:999px;font-weight:900;cursor:pointer}
+.tab.active{background:var(--navy);color:#fff}
+.network-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.network-card{background:#fff;border-radius:24px;overflow:hidden;box-shadow:var(--shadow);border:1px solid #e7ebf2}
+.network-head{padding:22px;color:#fff}
+.network-head h3{margin:0;font-size:1.35rem}
+.network-head p{margin:5px 0 0;opacity:.9;font-size:.86rem}
+.mtn{background:linear-gradient(135deg,#ffd900,#f2ad00);color:#101010}
+.airtel{background:linear-gradient(135deg,#124f9e,#071f57)}
+.telecel{background:linear-gradient(135deg,#ed1b24,#a40009)}
+.bundle-list{padding:10px;max-height:590px;overflow:auto}
+.bundle{display:flex;justify-content:space-between;gap:8px;padding:10px 9px;border-bottom:1px solid #edf0f5;font-size:.86rem}
+.bundle:last-child{border-bottom:0}
+.bundle b{color:var(--navy)}
+.price{font-weight:900;white-space:nowrap}
+.promo{margin:12px;background:#fff6cf;border:1px dashed #e5b600;padding:13px;border-radius:14px;text-align:center;font-weight:900}
+.delivery{margin:0 12px 14px;padding:13px;border-radius:13px;background:#f4f7fb;text-align:center;font-weight:900;color:var(--navy)}
+.features{background:var(--navy);color:#fff}
+.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.feature{padding:25px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:20px}
+.feature .icon{font-size:1.8rem}.feature h3{margin:12px 0 7px}.feature p{color:#cbd7ec;line-height:1.55;font-size:.9rem}
+.contact{background:#fff}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+.contact-card{padding:32px;border-radius:24px;background:#f5f8fc;border:1px solid #e4e9f1}
+.contact-card h3{font-size:1.6rem;color:var(--navy);margin-top:0}
+.contact-row{display:flex;gap:12px;align-items:center;padding:13px 0;border-bottom:1px solid #e4e9f1}
+.contact-row:last-child{border:0}
+.wa{background:#1aae5b;color:#fff;padding:14px 18px;border-radius:12px;display:inline-block;font-weight:900;margin-top:12px}
+footer{background:#050f29;color:#cbd7ec;padding:25px 0}
+.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer strong{color:#fff}
+#toast{position:fixed;right:20px;bottom:20px;background:#101828;color:#fff;padding:13px 17px;border-radius:12px;box-shadow:var(--shadow);display:none;z-index:100}
+@media(max-width:950px){
+ .hero-grid{grid-template-columns:1fr}.network-grid{grid-template-columns:repeat(2,1fr)}.feature-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:650px){
+ .nav{height:auto;padding:14px 0}.nav nav{display:none}.hero{padding:50px 0}.network-grid,.feature-grid,.contact-grid{grid-template-columns:1fr}
+ h1{font-size:3rem}.bundle-list{max-height:none}
+}
+</style>
+</head>
+<body>
+<div class="topbar">⚡ FAST • SECURE • AFFORDABLE DATA BUNDLES • WE'RE ALWAYS OPEN</div>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#">
+      <div class="logo">NS</div>
+      <div>Nesmac_S Tech Press<small>Consult & Stationaries Ltd.</small></div>
+    </a>
+    <nav>
+      <a href="#bundles">Bundles</a><a href="#why-us">Why Us</a><a href="#contact">Contact</a>
+      <a class="cta" href="https://wa.me/233597586898?text=Hello%20Nesmac_S%20Tech%20Press%2C%20I%20want%20to%20buy%20a%20data%20bundle.">Buy on WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="badge">📡 DATA BUNDLE HUB</span>
+      <h1>Stay <span>Connected.</span><br>Always.</h1>
+      <p>Reliable data bundles from MTN, AirtelTigo and Telecel, with clear pricing and convenient delivery. Choose a package and contact us directly to place your order.</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="#bundles">View Bundles</a>
+        <a class="btn btn-primary" href="https://wa.me/233597586898?text=Hello%20Nesmac_S%20Tech%20Press%2C%20I%20want%20to%20buy%20a%20data%20bundle.">Order on WhatsApp</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>Dream it, build it in Seattle's citadel of tech.</h3>
+      <div class="stats">
+        <div class="stat"><strong>3</strong><span>Networks available</span></div>
+        <div class="stat"><strong>1 TB</strong><span>Largest listed AirtelTigo option</span></div>
+        <div class="stat"><strong>5–30 min</strong><span>MTN Express delivery</span></div>
+        <div class="stat"><strong>24 hrs</strong><span>MTN Regular delivery</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="bundles">
+  <div class="container">
+    <div class="section-head">
+      <h2>Choose Your Data Bundle</h2>
+      <p>Simple, readable pricing for the packages shown on the Nesmac_S Tech Press flyer.</p>
+    </div>
+    <div class="network-tabs">
+      <button class="tab active" data-filter="all">All Networks</button>
+      <button class="tab" data-filter="mtn">MTN</button>
+      <button class="tab" data-filter="airtel">AirtelTigo</button>
+      <button class="tab" data-filter="telecel">Telecel</button>
+    </div>
+    <div class="network-grid">
+      <article class="network-card" data-network="mtn">
+        <div class="network-head mtn"><h3>MTN Express</h3><p>Valid for 90 days • 5–30 mins delivery</p></div>
+        <div class="bundle-list" id="mtnExpress"></div>
+        <div class="promo">217 GB — GH₵370.00 • PROMO</div>
+        <div class="delivery">⚡ Instant Promo: 108.21 GB — GH₵360<br>217.34 GB — GH₵410</div>
+      </article>
+
+      <article class="network-card" data-network="mtn">
+        <div class="network-head mtn"><h3>MTN Regular</h3><p>Valid for 90 days • within 24 hours</p></div>
+        <div class="bundle-list" id="mtnRegular"></div>
+        <div class="promo">217 GB — GH₵370.00 • PROMO</div>
+        <div class="delivery">⚡ Instant Promo: 108.21 GB — GH₵360<br>217.34 GB — GH₵410</div>
+      </article>
+
+      <article class="network-card" data-network="airtel">
+        <div class="network-head airtel"><h3>AirtelTigo</h3><p>Valid for 60 days • Instant delivery</p></div>
+        <div class="bundle-list" id="airtelList"></div>
+        <div class="promo">NON-EXPIRY PROMO</div>
+        <div class="bundle-list" id="airtelNonExpiry"></div>
+        <div class="delivery">⚡ DATA DELIVERY — INSTANT</div>
+      </article>
+
+      <article class="network-card" data-network="telecel">
+        <div class="network-head telecel"><h3>Telecel</h3><p>Valid for 60 days • Instant delivery</p></div>
+        <div class="bundle-list" id="telecelList"></div>
+        <div class="delivery">⚡ DATA DELIVERY — INSTANT</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="why-us" class="features">
+  <div class="container">
+    <div class="section-head"><h2 style="color:#fff">Why Nesmac_S?</h2><p style="color:#cbd7ec">A clean, convenient way to order the bundles you need.</p></div>
+    <div class="feature-grid">
+      <div class="feature"><div class="icon">🛡️</div><h3>Safe & Reliable</h3><p>Clear package information and direct ordering through WhatsApp.</p></div>
+      <div class="feature"><div class="icon">⚡</div><h3>Fast & Secure</h3><p>Delivery times are shown clearly for the different package types.</p></div>
+      <div class="feature"><div class="icon">💰</div><h3>Affordable Rates</h3><p>Compare network packages in one place before ordering.</p></div>
+      <div class="feature"><div class="icon">🎧</div><h3>Customer Service</h3><p>Contact the business directly for assistance and orders.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container contact-grid">
+    <div class="contact-card">
+      <h3>We're Always Open</h3>
+      <div class="contact-row"><span>📱</span><strong>0597 586 898</strong></div>
+      <div class="contact-row"><span>📱</span><strong>0506 431 149</strong></div>
+      <a class="wa" href="https://wa.me/233597586898?text=Hello%20Nesmac_S%20Tech%20Press%2C%20I%20want%20to%20buy%20a%20data%20bundle.">💬 Chat on WhatsApp</a>
+    </div>
+    <div class="contact-card">
+      <h3>How to Order</h3>
+      <div class="contact-row"><span>1️⃣</span><span>Choose your network and package.</span></div>
+      <div class="contact-row"><span>2️⃣</span><span>Send us the package size you want.</span></div>
+      <div class="contact-row"><span>3️⃣</span><span>Provide the number to receive the data.</span></div>
+      <div class="contact-row"><span>4️⃣</span><span>We confirm your order and delivery.</span></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div><strong>Nesmac_S Tech Press Consult & Stationaries Ltd.</strong><br>Data Bundle Hub</div>
+    <div>© <span id="year"></span> Nesmac_S Tech Press. All rights reserved.</div>
+  </div>
+</footer>
+<div id="toast"></div>
+
+<script>
+const mtnExpress = [
+["1.0 GB","GH₵4.50"],["2.0 GB","GH₵8.90"],["3.0 GB","GH₵13.90"],["4.0 GB","GH₵17.90"],["5.0 GB","GH₵23.50"],["6.0 GB","GH₵28.00"],["7.0 GB","GH₵32.40"],["8.0 GB","GH₵35.50"],["9.0 GB","GH₵39.90 PR"],["10.0 GB","GH₵43.50"],["11.0 GB","GH₵49.50"],["12.0 GB","GH₵54.50"],["13.0 GB","GH₵57.50"],["14.0 GB","GH₵61.50"],["15.0 GB","GH₵66.50 PR"],["16.0 GB","GH₵71.50"],["17.0 GB","GH₵75.90"],["18.0 GB","GH₵79.50"],["19.0 GB","GH₵83.50"],["20.0 GB","GH₵89.50"],["25.0 GB","GH₵118.00"],["30.0 GB","GH₵130.00 PR"],["35.0 GB","GH₵153.50"],["40.0 GB","GH₵170.50"],["45.0 GB","GH₵193.50"],["50.0 GB","GH₵210.00"],["55.0 GB","GH₵233.50"],["60.0 GB","GH₵256.50"],["65.0 GB","GH₵279.50"],["70.0 GB","GH₵302.50"],["75.0 GB","GH₵325.50"],["80.0 GB","GH₵348.50"],["85.0 GB","GH₵371.50"],["90.0 GB","GH₵394.50"],["95.0 GB","GH₵417.50"],["100 GB","GH₵430.00"]
+];
+const mtnRegular = [
+["1.0 GB","GH₵4.20"],["2.0 GB","GH₵8.50"],["3.0 GB","GH₵12.50"],["4.0 GB","GH₵16.50"],["5.0 GB","GH₵22.50"],["6.0 GB","GH₵25.50"],["7.0 GB","GH₵30.50"],["8.0 GB","GH₵33.50 PR"],["9.0 GB","GH₵37.50"],["10.0 GB","GH₵41.50 PR"],["11.0 GB","GH₵45.50"],["12.0 GB","GH₵49.00"],["13.0 GB","GH₵52.50"],["14.0 GB","GH₵56.00"],["15.0 GB","GH₵60.00"],["16.0 GB","GH₵64.50 PR"],["17.0 GB","GH₵68.00"],["18.0 GB","GH₵71.50"],["19.0 GB","GH₵77.00"],["20.0 GB","GH₵82.00"],["25.0 GB","GH₵105.00"],["30.0 GB","GH₵125.00"],["35.0 GB","GH₵144.00"],["40.0 GB","GH₵162.00"],["45.0 GB","GH₵186.00"],["50.0 GB","GH₵210.00"],["55.0 GB","GH₵228.00"],["60.0 GB","GH₵246.00"],["65.0 GB","GH₵264.00"],["70.0 GB","GH₵282.00"],["75.0 GB","GH₵300.00"],["80.0 GB","GH₵318.00"],["85.0 GB","GH₵336.00"],["100.0 GB","GH₵392.00"]
+];
+const airtel = [
+["1.0 GB","GH₵4.00"],["2.0 GB","GH₵8.30"],["3.0 GB","GH₵13.00"],["4.0 GB","GH₵17.00"],["5.0 GB","GH₵22.50"],["6.0 GB","GH₵26.00"],["7.0 GB","GH₵29.50"],["8.0 GB","GH₵33.00"],["9.0 GB","GH₵37.50"],["10.0 GB","GH₵41.00"],["11.0 GB","GH₵44.50"],["12.0 GB","GH₵49.50"],["13.0 GB","GH₵53.00"],["14.0 GB","GH₵56.50"],["15.0 GB","GH₵60.50"],["16.0 GB","GH₵66.50"],["17.0 GB","GH₵70.00"],["18.0 GB","GH₵73.50"],["19.0 GB","GH₵77.00"]
+];
+const airtelNonExpiry = [
+["20.0 GB","GH₵65"],["30.0 GB","GH₵82"],["40.0 GB","GH₵95"],["50.0 GB","GH₵110"],["60.0 GB","GH₵160"],["80.0 GB","GH₵175"],["100.0 GB","GH₵220"],["200.0 GB","GH₵415"],["500.0 GB","GH₵1090"],["1.0 TB","GH₵2200"]
+];
+const telecel = [
+["5 GB","GH₵19.90"],["10 GB","GH₵38.00"],["11 GB","GH₵42.00"],["15 GB","GH₵57.00"],["16 GB","GH₵61.00"],["20 GB","GH₵71.00"],["22 GB","GH₵84.00"],["25 GB","GH₵90.00"],["27 GB","GH₵105.00"],["30 GB","GH₵110.00"],["33 GB","GH₵119.00"],["35 GB","GH₵132.00"],["40 GB","GH₵145.00"],["44 GB","GH₵157.00"],["45 GB","GH₵165.00"],["50 GB","GH₵176.00"],["55 GB","GH₵196.00"],["60 GB","GH₵216.00"],["65 GB","GH₵236.00"],["70 GB","GH₵256.00"],["75 GB","GH₵276.00"],["80 GB","GH₵296.00"],["85 GB","GH₵316.00"],["90 GB","GH₵336.00"],["95 GB","GH₵356.00"],["100 GB","GH₵358.00"],["110 GB","GH₵390.00"],["200 GB","GH₵700.00"]
+];
+
+function render(id, items){
+  document.getElementById(id).innerHTML = items.map(x => `<div class="bundle"><span>${x[0]}</span><b class="price">${x[1]}</b></div>`).join("");
+}
+render("mtnExpress",mtnExpress); render("mtnRegular",mtnRegular);
+render("airtelList",airtel); render("airtelNonExpiry",airtelNonExpiry); render("telecelList",telecel);
+
+document.querySelectorAll(".tab").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    document.querySelectorAll(".tab").forEach(b=>b.classList.remove("active"));
+    btn.classList.add("active");
+    const f=btn.dataset.filter;
+    document.querySelectorAll(".network-card").forEach(card=>{
+      card.style.display = f==="all" || card.dataset.network===f ? "" : "none";
+    });
+  });
+});
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
